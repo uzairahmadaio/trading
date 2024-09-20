@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.6
   awesome_bottom_bar: ^1.2.4
   eva_icons_flutter: ^3.1.0
+  fl_chart: ^0.67.0
   get: ^4.6.6
 
 dev_dependencies:
