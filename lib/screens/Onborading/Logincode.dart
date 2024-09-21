@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
+import 'package:tradingapp/screens/Onborading/Login.dart';
 import 'package:tradingapp/widgets/Custom_Button.dart';
 
 class LOgincode extends StatefulWidget {
@@ -170,7 +171,7 @@ class _LOgincodeState extends State<LOgincode> {
               CustomButton(
                 text: 'Verify',
                 onTap: () {
-                  Get.to(());
+                  Get.to((Login()));
                 },
               ),
               SizedBox(
