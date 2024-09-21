@@ -1,5 +1,8 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:tradingapp/screens/Portfolio/portfolio.dart';
+import 'package:tradingapp/screens/theme/theme.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -30,7 +33,7 @@ class _HomeState extends State<Home> {
           ),
           SingleChildScrollView(
               child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(12.0),
             child: Column(
               children: [
                 SizedBox(
@@ -77,7 +80,7 @@ class _HomeState extends State<Home> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     border: Border.all(color: Colors.grey, width: 0.3),
-                    color: Color.fromARGB(255, 41, 76, 78),
+                    color: Color(0xff5E687),
                   ),
                   child: TextField(
                     decoration: InputDecoration(
@@ -99,7 +102,7 @@ class _HomeState extends State<Home> {
                   height: 80,
                   padding: EdgeInsets.all(8), // Similar to card padding
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 41, 76, 78),
+                    color: kPrimaryColor,
                     borderRadius: BorderRadius.circular(
                         15), // Card's default border radius
                     boxShadow: [
@@ -149,21 +152,26 @@ class _HomeState extends State<Home> {
                 SizedBox(height: 20),
 
                 // Portfolio Section
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Your Portfolio',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 15),
-                    ),
-                    Icon(
-                      Icons.arrow_forward_ios_outlined,
-                      color: Colors.grey,
-                    )
-                  ],
+                GestureDetector(
+                  onTap: () {
+                    Get.to(Portfolio());
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Your Portfolio',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 15),
+                      ),
+                      Icon(
+                        Icons.arrow_forward_ios_outlined,
+                        color: Colors.grey,
+                      )
+                    ],
+                  ),
                 ),
                 SizedBox(height: 10),
                 SingleChildScrollView(
@@ -211,12 +219,17 @@ class _HomeState extends State<Home> {
                   ],
                 ),
                 SizedBox(height: 10),
-                WatchlistTile(
-                  title: 'EURUSD',
-                  subtitle: 'Euro / U.S. Dollar',
-                  value: '1.0749',
-                  change: '-0.0037 (-0.3440%)',
-                  isPositive: false,
+                GestureDetector(
+                  onTap: () {
+                    Portfolio();
+                  },
+                  child: WatchlistTile(
+                    title: 'EURUSD',
+                    subtitle: 'Euro / U.S. Dollar',
+                    value: '1.0749',
+                    change: '-0.0037 (-0.3440%)',
+                    isPositive: false,
+                  ),
                 ),
                 SizedBox(
                   height: 10,
@@ -274,7 +287,7 @@ class PortfolioTile extends StatelessWidget {
         width: MediaQuery.sizeOf(context).width * 0.5,
         padding: EdgeInsets.all(7),
         decoration: BoxDecoration(
-          color: Colors.grey[900],
+          color: kPrimaryColor,
           borderRadius: BorderRadius.circular(8),
         ),
         child: Column(
@@ -366,9 +379,19 @@ class WatchlistTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(16),
+      padding: EdgeInsets.all(10),
       decoration: BoxDecoration(
-        color: Colors.grey[900],
+        border: Border(
+          left: BorderSide(
+            color: Colors.grey, // Border color
+            width: 0.2, // Border width
+          ),
+          right: BorderSide(
+            color: Colors.grey, // Border color
+            width: 0.2, // Border width
+          ),
+        ),
+        color: kPrimaryColor,
         borderRadius: BorderRadius.circular(8),
       ),
       child: Row(
