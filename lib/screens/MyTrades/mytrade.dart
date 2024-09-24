@@ -32,6 +32,7 @@ class _MytradeState extends State<Mytrade> {
               child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
+<<<<<<< HEAD
               children: [
                 SizedBox(
                   height: 50,
@@ -106,6 +107,9 @@ class _MytradeState extends State<Mytrade> {
                   ),
                 ),
               ],
+=======
+              children: [Row()],
+>>>>>>> 689fabc8150d7778d5ec1358b564d3a17b03c484
             ),
           ))
         ],

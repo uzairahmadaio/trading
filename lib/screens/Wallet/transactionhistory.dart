@@ -1,16 +1,14 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 
-class Wallets extends StatefulWidget {
-  const Wallets({super.key});
+class Transaction extends StatefulWidget {
+  const Transaction({super.key});
 
   @override
-  State<Wallets> createState() => _WalletsState();
+  State<Transaction> createState() => _TransactionState();
 }
 
-class _WalletsState extends State<Wallets> {
+class _TransactionState extends State<Transaction> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,190 +34,19 @@ class _WalletsState extends State<Wallets> {
             child: Column(
               children: [
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Row(
-                      children: [
-                        Column(
-                          children: [
-                            SizedBox(
-                              width: 130,
-                              child: Text(
-                                'Hala',
-                                style: TextStyle(
-                                    fontSize: 14,
-                                    color: Color(0xFF79869B),
-                                    fontWeight: FontWeight.w600),
-                              ),
-                            ),
-                            SizedBox(
-                              width: 130,
-                              child: Text(
-                                'Louis Rosenfeld',
-                                style: TextStyle(
-                                    fontSize: 17,
-                                    color: Color(0xFFFFFFFF),
-                                    fontWeight: FontWeight.w800),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
+                    Image.asset(
+                      'assets/arrowleft.png',
+                      width: 50,
+                      height: 50,
                     ),
-                    Row(
-                      children: [
-                        Column(
-                          children: [
-                            Icon(
-                              EvaIcons.bellOutline,
-                              size: 25,
-                              color: Colors.white,
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Column(
-                          children: [
-                            Image.asset(
-                              'assets/men.png',
-                              width: 50,
-                              height: 50,
-                            )
-                          ],
-                        )
-                      ],
+                    SizedBox(
+                      width: 40,
                     ),
-                  ],
-                ),
-                SizedBox(
-                  height: 12,
-                ),
-                Row(
-                  children: [
-                    Column(
-                      children: [
-                        SizedBox(
-                          width: 120,
-                          child: Text(
-                            'Wellet Balance',
-                            style: TextStyle(
-                                fontSize: 14,
-                                color: Color(0xFF79869B),
-                                fontWeight: FontWeight.w600),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 120,
-                          child: Text(
-                            "\$ 134,876",
-                            style: TextStyle(
-                                fontSize: 25,
-                                color: Color(0xFFFFFFFF),
-                                fontWeight: FontWeight.w800),
-                          ),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Icon(
-                          EvaIcons.eyeOutline,
-                          size: 28,
-                          color: Color(0xFF545454),
-                        )
-                      ],
-                    )
-                  ],
-                ),
-                SizedBox(
-                  height: 16,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      width: 160,
-                      height: 55,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25),
-                        color:
-                            Color.fromARGB(255, 226, 226, 226).withOpacity(0.1),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            width: 35,
-                            height: 35,
-                            decoration: BoxDecoration(
-                                color: Color(0xFF22B495),
-                                borderRadius: BorderRadius.circular(25)),
-                            child: Icon(
-                              Icons.arrow_downward,
-                              color: Colors.white,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 8,
-                          ),
-                          Text(
-                            'Deposit',
-                            style: TextStyle(
-                                fontSize: 17,
-                                color: Color(0xFFFFFFFF),
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      width: 160,
-                      height: 55,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25),
-                        color:
-                            Color.fromARGB(255, 226, 226, 226).withOpacity(0.1),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            width: 35,
-                            height: 35,
-                            decoration: BoxDecoration(
-                                color: Color(0xFF22B495),
-                                borderRadius: BorderRadius.circular(25)),
-                            child: Icon(
-                              Icons.arrow_upward,
-                              color: Colors.white,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 8,
-                          ),
-                          Text(
-                            'Withdraw',
-                            style: TextStyle(
-                                fontSize: 17,
-                                color: Color(0xFFFFFFFF),
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Row(
-                  children: [
                     Text(
                       'Transaction History',
                       style: TextStyle(
-                          fontSize: 19,
+                          fontSize: 22,
                           color: Color(0xFFFFFFFF),
                           fontWeight: FontWeight.bold),
                     ),
