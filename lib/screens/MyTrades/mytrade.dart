@@ -29,89 +29,87 @@ class _MytradeState extends State<Mytrade> {
             ),
           ),
           SingleChildScrollView(
-              child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-<<<<<<< HEAD
-              children: [
-                SizedBox(
-                  height: 50,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+            child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
                   children: [
-                    Text('My Trades',
-                        style: TextStyle(color: Colors.white, fontSize: 20)),
-                  ],
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Column(
-                    children: [
-                      // Top Buttons
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                    SizedBox(
+                      height: 50,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('My Trades',
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 20)),
+                      ],
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Column(
                         children: [
-                          _buildButton('Open orders'),
-                          SizedBox(width: 10),
-                          _buildButton('Close orders'),
+                          // Top Buttons
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              _buildButton('Open orders'),
+                              SizedBox(width: 10),
+                              _buildButton('Close orders'),
+                            ],
+                          ),
+                          SizedBox(height: 20),
+                          // Trade Info
+                          Container(
+                            padding: EdgeInsets.all(16),
+                            decoration: BoxDecoration(
+                              color: kPrimaryColor,
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                _buildTradeRow('Entry', '0.826251'),
+                                _buildTradeRow('Balance', '\$12',
+                                    color: Colors.blue),
+                                _buildTradeRow('Equity', '18'),
+                                _buildTradeRow('Margin', '18'),
+                                _buildTradeRow('TP', '0.641521',
+                                    color: Colors.green),
+                                _buildTradeRow('SL', '0.81512',
+                                    color: Colors.red),
+                                GestureDetector(
+                                  onTap: () {
+                                    // Handle button press here
+                                  },
+                                  child: Container(
+                                    padding: EdgeInsets.symmetric(vertical: 16),
+                                    decoration: BoxDecoration(
+                                      color: kPrimaryColor,
+                                      borderRadius: BorderRadius.circular(
+                                          8), // Optional: Add rounded corners
+                                    ),
+                                    alignment: Alignment.center,
+                                    child: Text(
+                                      'Close Trade',
+                                      style: TextStyle(
+                                          fontSize: 18,
+                                          color: Colors
+                                              .white), // Ensure text is visible on dark background
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 20),
+                          // Close Trade Button
+                          Container(),
                         ],
                       ),
-                      SizedBox(height: 20),
-                      // Trade Info
-                      Container(
-                        padding: EdgeInsets.all(16),
-                        decoration: BoxDecoration(
-                          color: kPrimaryColor,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            _buildTradeRow('Entry', '0.826251'),
-                            _buildTradeRow('Balance', '\$12',
-                                color: Colors.blue),
-                            _buildTradeRow('Equity', '18'),
-                            _buildTradeRow('Margin', '18'),
-                            _buildTradeRow('TP', '0.641521',
-                                color: Colors.green),
-                            _buildTradeRow('SL', '0.81512', color: Colors.red),
-                            GestureDetector(
-                              onTap: () {
-                                // Handle button press here
-                              },
-                              child: Container(
-                                padding: EdgeInsets.symmetric(vertical: 16),
-                                decoration: BoxDecoration(
-                                  color: kPrimaryColor,
-                                  borderRadius: BorderRadius.circular(
-                                      8), // Optional: Add rounded corners
-                                ),
-                                alignment: Alignment.center,
-                                child: Text(
-                                  'Close Trade',
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      color: Colors
-                                          .white), // Ensure text is visible on dark background
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      SizedBox(height: 20),
-                      // Close Trade Button
-                      Container(),
-                    ],
-                  ),
-                ),
-              ],
-=======
-              children: [Row()],
->>>>>>> 689fabc8150d7778d5ec1358b564d3a17b03c484
-            ),
-          ))
+                    ),
+                  ],
+                )),
+          )
         ],
       ),
     );
