@@ -31,7 +31,7 @@ class _MytradeState extends State<Mytrade> {
               child: Padding(
             padding: const EdgeInsets.all(12.0),
             child: Column(
-              children: [],
+              children: [Row()],
             ),
           ))
         ],
