@@ -2,6 +2,12 @@
 
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:tradingapp/screens/Notification/notification.dart';
+import 'package:tradingapp/screens/Profile/profile.dart';
+import 'package:tradingapp/screens/Wallet/deposit.dart';
+import 'package:tradingapp/screens/Wallet/transactionhistory.dart';
+import 'package:tradingapp/screens/Wallet/withdraw.dart';
 
 class Wallets extends StatefulWidget {
   const Wallets({super.key});
@@ -35,6 +41,9 @@ class _WalletsState extends State<Wallets> {
             padding: const EdgeInsets.only(left: 16.0, right: 16),
             child: Column(
               children: [
+                SizedBox(
+                  height: 50,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -70,10 +79,15 @@ class _WalletsState extends State<Wallets> {
                       children: [
                         Column(
                           children: [
-                            Icon(
-                              EvaIcons.bellOutline,
-                              size: 25,
-                              color: Colors.white,
+                            GestureDetector(
+                              onTap: () {
+                                Get.to(Notifications());
+                              },
+                              child: Icon(
+                                EvaIcons.bellOutline,
+                                size: 25,
+                                color: Colors.white,
+                              ),
                             ),
                           ],
                         ),
@@ -82,10 +96,15 @@ class _WalletsState extends State<Wallets> {
                         ),
                         Column(
                           children: [
-                            Image.asset(
-                              'assets/men.png',
-                              width: 50,
-                              height: 50,
+                            GestureDetector(
+                              onTap: () {
+                                Get.to(Profile());
+                              },
+                              child: Image.asset(
+                                'assets/men.png',
+                                width: 50,
+                                height: 50,
+                              ),
                             )
                           ],
                         )
@@ -99,6 +118,7 @@ class _WalletsState extends State<Wallets> {
                 Row(
                   children: [
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         SizedBox(
                           width: 120,
@@ -110,27 +130,27 @@ class _WalletsState extends State<Wallets> {
                                 fontWeight: FontWeight.w600),
                           ),
                         ),
-                        SizedBox(
-                          width: 120,
-                          child: Text(
-                            "\$ 134,876",
-                            style: TextStyle(
-                                fontSize: 25,
-                                color: Color(0xFFFFFFFF),
-                                fontWeight: FontWeight.w800),
-                          ),
+                        Row(
+                          children: [
+                            SizedBox(
+                              width: 120,
+                              child: Text(
+                                "\$ 134,876",
+                                style: TextStyle(
+                                    fontSize: 25,
+                                    color: Color(0xFFFFFFFF),
+                                    fontWeight: FontWeight.w800),
+                              ),
+                            ),
+                            Icon(
+                              EvaIcons.eyeOutline,
+                              size: 28,
+                              color: Color(0xFF545454),
+                            )
+                          ],
                         ),
                       ],
                     ),
-                    Column(
-                      children: [
-                        Icon(
-                          EvaIcons.eyeOutline,
-                          size: 28,
-                          color: Color(0xFF545454),
-                        )
-                      ],
-                    )
                   ],
                 ),
                 SizedBox(
@@ -139,74 +159,84 @@ class _WalletsState extends State<Wallets> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      width: 160,
-                      height: 55,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25),
-                        color:
-                            Color.fromARGB(255, 226, 226, 226).withOpacity(0.1),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            width: 35,
-                            height: 35,
-                            decoration: BoxDecoration(
-                                color: Color(0xFF22B495),
-                                borderRadius: BorderRadius.circular(25)),
-                            child: Icon(
-                              Icons.arrow_downward,
-                              color: Colors.white,
+                    GestureDetector(
+                      onTap: () {
+                        Get.to(Deposit());
+                      },
+                      child: Container(
+                        width: 150,
+                        height: 55,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(25),
+                          color: Color.fromARGB(255, 226, 226, 226)
+                              .withOpacity(0.1),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              width: 35,
+                              height: 35,
+                              decoration: BoxDecoration(
+                                  color: Color(0xFF22B495),
+                                  borderRadius: BorderRadius.circular(25)),
+                              child: Icon(
+                                Icons.arrow_downward,
+                                color: Colors.white,
+                              ),
                             ),
-                          ),
-                          SizedBox(
-                            width: 8,
-                          ),
-                          Text(
-                            'Deposit',
-                            style: TextStyle(
-                                fontSize: 17,
-                                color: Color(0xFFFFFFFF),
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ],
+                            SizedBox(
+                              width: 8,
+                            ),
+                            Text(
+                              'Deposit',
+                              style: TextStyle(
+                                  fontSize: 17,
+                                  color: Color(0xFFFFFFFF),
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                    Container(
-                      width: 160,
-                      height: 55,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25),
-                        color:
-                            Color.fromARGB(255, 226, 226, 226).withOpacity(0.1),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            width: 35,
-                            height: 35,
-                            decoration: BoxDecoration(
-                                color: Color(0xFF22B495),
-                                borderRadius: BorderRadius.circular(25)),
-                            child: Icon(
-                              Icons.arrow_upward,
-                              color: Colors.white,
+                    GestureDetector(
+                      onTap: () {
+                        Get.to(Withdraw());
+                      },
+                      child: Container(
+                        width: 150,
+                        height: 55,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(25),
+                          color: Color.fromARGB(255, 226, 226, 226)
+                              .withOpacity(0.1),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              width: 35,
+                              height: 35,
+                              decoration: BoxDecoration(
+                                  color: Color(0xFF22B495),
+                                  borderRadius: BorderRadius.circular(25)),
+                              child: Icon(
+                                Icons.arrow_upward,
+                                color: Colors.white,
+                              ),
                             ),
-                          ),
-                          SizedBox(
-                            width: 8,
-                          ),
-                          Text(
-                            'Withdraw',
-                            style: TextStyle(
-                                fontSize: 17,
-                                color: Color(0xFFFFFFFF),
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ],
+                            SizedBox(
+                              width: 8,
+                            ),
+                            Text(
+                              'Withdraw',
+                              style: TextStyle(
+                                  fontSize: 17,
+                                  color: Color(0xFFFFFFFF),
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
                       ),
                     )
                   ],
@@ -214,21 +244,24 @@ class _WalletsState extends State<Wallets> {
                 SizedBox(
                   height: 20,
                 ),
-                Row(
-                  children: [
-                    Text(
-                      'Transaction History',
-                      style: TextStyle(
-                          fontSize: 19,
-                          color: Color(0xFFFFFFFF),
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 5,
+                GestureDetector(
+                  onTap: () {
+                    Get.to(Transaction());
+                  },
+                  child: Row(
+                    children: [
+                      Text(
+                        'Transaction History',
+                        style: TextStyle(
+                            fontSize: 19,
+                            color: Color(0xFFFFFFFF),
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
                 ),
                 ListTile(
+                  minTileHeight: 25,
                   leading: Container(
                     width: 35,
                     height: 35,
@@ -262,14 +295,12 @@ class _WalletsState extends State<Wallets> {
                         fontWeight: FontWeight.w800),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 25.0, right: 25),
-                  child: Divider(
-                    thickness: 2,
-                    color: Colors.blue,
-                  ),
+                Divider(
+                  thickness: 1,
+                  color: Colors.blue,
                 ),
                 ListTile(
+                  minTileHeight: 25,
                   leading: Container(
                     width: 35,
                     height: 35,
@@ -303,14 +334,12 @@ class _WalletsState extends State<Wallets> {
                         fontWeight: FontWeight.w800),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 25.0, right: 25),
-                  child: Divider(
-                    thickness: 2,
-                    color: Colors.blue,
-                  ),
+                Divider(
+                  thickness: 1,
+                  color: Colors.blue,
                 ),
                 ListTile(
+                  minTileHeight: 25,
                   leading: Container(
                     width: 35,
                     height: 35,
@@ -344,12 +373,9 @@ class _WalletsState extends State<Wallets> {
                         fontWeight: FontWeight.w800),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 25.0, right: 25),
-                  child: Divider(
-                    thickness: 2,
-                    color: Colors.blue,
-                  ),
+                Divider(
+                  thickness: 1,
+                  color: Colors.blue,
                 ),
                 SizedBox(
                   height: 20,

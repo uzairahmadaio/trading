@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Contact extends StatefulWidget {
   const Contact({super.key});
@@ -30,15 +31,23 @@ class _ContactState extends State<Contact> {
           ),
           SingleChildScrollView(
               child: Padding(
-            padding: const EdgeInsets.only(left: 16.0, right: 16),
+            padding: const EdgeInsets.only(left: 10.0, right: 10),
             child: Column(
               children: [
+                SizedBox(
+                  height: 50,
+                ),
                 Row(
                   children: [
-                    Image.asset(
-                      'assets/arrowleft.png',
-                      width: 50,
-                      height: 50,
+                    GestureDetector(
+                      onTap: () {
+                        Get.back();
+                      },
+                      child: Image.asset(
+                        'assets/arrowleft.png',
+                        width: 50,
+                        height: 50,
+                      ),
                     ),
                     SizedBox(
                       width: 50,

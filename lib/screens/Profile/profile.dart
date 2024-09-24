@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tradingapp/screens/Onborading/Onborading1.dart';
+import 'package:tradingapp/screens/Portfolio/Contact.dart';
+import 'package:tradingapp/screens/Portfolio/privacy.dart';
 import 'package:tradingapp/screens/theme/theme.dart';
 
 class Profile extends StatefulWidget {
@@ -123,9 +126,12 @@ class _ProfileState extends State<Profile> {
                     ),
                   ],
                 ),
+                SizedBox(
+                  height: 10,
+                ),
                 GestureDetector(
                   onTap: () {
-                    // Get.to(MyWatchlist());
+                    // Get.to(edi());
                   },
                   child: Container(
                     width: MediaQuery.sizeOf(context).width - 25,
@@ -196,40 +202,9 @@ class _ProfileState extends State<Profile> {
                 SizedBox(
                   height: 10,
                 ),
-                Container(
-                  width: MediaQuery.sizeOf(context).width - 25,
-                  height: 52,
-                  decoration: BoxDecoration(
-                      color: kPrimaryColor,
-                      borderRadius: BorderRadius.circular(10)),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      children: [
-                        Icon(
-                          Icons.group,
-                          color: Colors.white,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 8),
-                          child: Text(
-                            'Contact Admin',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
                 GestureDetector(
                   onTap: () {
-                    // Get.to(Contacts());
+                    Get.to(Contact());
                   },
                   child: Container(
                     width: MediaQuery.sizeOf(context).width - 25,
@@ -242,13 +217,13 @@ class _ProfileState extends State<Profile> {
                       child: Row(
                         children: [
                           Icon(
-                            Icons.help_outline,
+                            Icons.group,
                             color: Colors.white,
                           ),
                           Padding(
                             padding: const EdgeInsets.only(left: 8),
                             child: Text(
-                              'Help center',
+                              'Contact Admin',
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 16,
@@ -263,6 +238,42 @@ class _ProfileState extends State<Profile> {
                 SizedBox(
                   height: 10,
                 ),
+                // GestureDetector(
+                //   onTap: () {
+
+                //   },
+                //   child: Container(
+                //     width: MediaQuery.sizeOf(context).width - 25,
+                //     height: 52,
+                //     decoration: BoxDecoration(
+                //         color: kPrimaryColor,
+                //         borderRadius: BorderRadius.circular(10)),
+                //     child: Paddin  Get.to(Contacts());g(
+                //       padding: const EdgeInsets.all(8.0),
+                //       child: Row(
+                //         children: [
+                //           Icon(
+                //             Icons.help_outline,
+                //             color: Colors.white,
+                //           ),
+                //           Padding(
+                //             padding: const EdgeInsets.only(left: 8),
+                //             child: Text(
+                //               'Help center',
+                //               style: TextStyle(
+                //                   color: Colors.white,
+                //                   fontSize: 16,
+                //                   fontWeight: FontWeight.w600),
+                //             ),
+                //           ),
+                //         ],
+                //       ),
+                //     ),
+                //   ),
+                // ),
+                // SizedBox(
+                //   height: 10,
+                // ),
                 Row(
                   children: [
                     Text(
@@ -271,35 +282,43 @@ class _ProfileState extends State<Profile> {
                     ),
                   ],
                 ),
+                SizedBox(
+                  height: 10,
+                ),
                 GestureDetector(
                   onTap: () {
                     // Get.to(Blogging());
                   },
-                  child: Container(
-                    width: MediaQuery.sizeOf(context).width - 25,
-                    height: 52,
-                    decoration: BoxDecoration(
-                        color: kPrimaryColor,
-                        borderRadius: BorderRadius.circular(10)),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.shield_outlined,
-                            color: Colors.white,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 8),
-                            child: Text(
-                              'Privacy Policy',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w600),
+                  child: GestureDetector(
+                    onTap: () {
+                      Get.to(Privacy());
+                    },
+                    child: Container(
+                      width: MediaQuery.sizeOf(context).width - 25,
+                      height: 52,
+                      decoration: BoxDecoration(
+                          color: kPrimaryColor,
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.shield_outlined,
+                              color: Colors.white,
                             ),
-                          ),
-                        ],
+                            Padding(
+                              padding: const EdgeInsets.only(left: 8),
+                              child: Text(
+                                'Privacy Policy',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w600),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -310,7 +329,7 @@ class _ProfileState extends State<Profile> {
 
                 GestureDetector(
                   onTap: () {
-                    // Get.to(OnboardingScreen());
+                    Get.to(On1());
                   },
                   child: Container(
                     width: MediaQuery.sizeOf(context).width - 25,

@@ -3,6 +3,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tradingapp/screens/Wallet/preview.dart';
 import 'package:tradingapp/widgets/Custom_Button.dart';
 
 class Deposit extends StatefulWidget {
@@ -34,15 +35,21 @@ class _DepositState extends State<Deposit> {
           ),
           SingleChildScrollView(
               child: Padding(
-            padding: const EdgeInsets.only(left: 16.0, right: 16),
+            padding: const EdgeInsets.only(left: 10.0, right: 10),
             child: Column(
               children: [
+                SizedBox(height: 50),
                 Row(
                   children: [
-                    Image.asset(
-                      'assets/arrowleft.png',
-                      width: 50,
-                      height: 50,
+                    GestureDetector(
+                      onTap: () {
+                        Get.back();
+                      },
+                      child: Image.asset(
+                        'assets/arrowleft.png',
+                        width: 50,
+                        height: 50,
+                      ),
                     ),
                     SizedBox(
                       width: 100,
@@ -89,7 +96,7 @@ class _DepositState extends State<Deposit> {
                     Text(
                       'Bank Details',
                       style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 14,
                           color: Color(0xFFFFFFFF),
                           fontWeight: FontWeight.bold),
                     ),
@@ -111,7 +118,7 @@ class _DepositState extends State<Deposit> {
                     Text(
                       'ABC Bank',
                       style: TextStyle(
-                          fontSize: 17,
+                          fontSize: 15,
                           color: Color(0xFFFFFFFF),
                           fontWeight: FontWeight.bold),
                     ),
@@ -133,7 +140,7 @@ class _DepositState extends State<Deposit> {
                     Text(
                       '123456789',
                       style: TextStyle(
-                          fontSize: 17,
+                          fontSize: 15,
                           color: Color(0xFFFFFFFF),
                           fontWeight: FontWeight.bold),
                     ),
@@ -155,7 +162,7 @@ class _DepositState extends State<Deposit> {
                     Text(
                       'XYZ Ltd',
                       style: TextStyle(
-                          fontSize: 17,
+                          fontSize: 15,
                           color: Color(0xFFFFFFFF),
                           fontWeight: FontWeight.bold),
                     ),
@@ -177,7 +184,7 @@ class _DepositState extends State<Deposit> {
                     Text(
                       'ABCD1234',
                       style: TextStyle(
-                          fontSize: 17,
+                          fontSize: 15,
                           color: Color(0xFFFFFFFF),
                           fontWeight: FontWeight.bold),
                     ),
@@ -196,7 +203,7 @@ class _DepositState extends State<Deposit> {
                     Text(
                       '--------------',
                       style: TextStyle(
-                          fontSize: 17,
+                          fontSize: 15,
                           color: Color(0xFFFFFFFF),
                           fontWeight: FontWeight.bold),
                     ),
@@ -210,7 +217,7 @@ class _DepositState extends State<Deposit> {
                     Text(
                       'Amount Deposited',
                       style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 14,
                           color: Color(0xFFFFFFFF),
                           fontWeight: FontWeight.bold),
                     ),
@@ -251,7 +258,7 @@ class _DepositState extends State<Deposit> {
                     Text(
                       'Upload Proof of Transfer',
                       style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 14,
                           color: Color(0xFFFFFFFF),
                           fontWeight: FontWeight.bold),
                     ),
@@ -281,7 +288,7 @@ class _DepositState extends State<Deposit> {
                         child: Text(
                           'Transcation.png',
                           style: TextStyle(
-                              fontSize: 16,
+                              fontSize: 14,
                               color: Color(0xFFFFFFFF),
                               fontWeight: FontWeight.bold),
                         ),
@@ -308,32 +315,38 @@ class _DepositState extends State<Deposit> {
                   ),
                 ),
                 SizedBox(
-                  height: 53,
+                  height: 30,
                 ),
-                Container(
-                  width: 330,
-                  height: 55,
-                  decoration: ShapeDecoration(
-                    color: Color.fromARGB(255, 226, 226, 226).withOpacity(0.1),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30),
+                GestureDetector(
+                  onTap: () {
+                    Get.to(Preview());
+                  },
+                  child: Container(
+                    width: 330,
+                    height: 55,
+                    decoration: ShapeDecoration(
+                      color:
+                          Color.fromARGB(255, 226, 226, 226).withOpacity(0.1),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                      ),
                     ),
-                  ),
-                  child: Center(
-                    child: Text(
-                      'Preview Upload',
-                      style: TextStyle(
-                        color: Color(0xFFFFFFFF),
-                        fontSize: 15.46,
-                        // fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w600,
-                        // height: 0
+                    child: Center(
+                      child: Text(
+                        'Preview Upload',
+                        style: TextStyle(
+                          color: Color(0xFFFFFFFF),
+                          fontSize: 15.46,
+                          // fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w600,
+                          // height: 0
+                        ),
                       ),
                     ),
                   ),
                 ),
                 SizedBox(
-                  height: 26,
+                  height: 20,
                 ),
                 Container(
                   width: 330,

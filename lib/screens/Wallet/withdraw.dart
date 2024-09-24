@@ -3,6 +3,7 @@
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Withdraw extends StatefulWidget {
   const Withdraw({super.key});
@@ -33,25 +34,33 @@ class _WithdrawState extends State<Withdraw> {
           ),
           SingleChildScrollView(
               child: Padding(
-            padding: const EdgeInsets.only(left: 16.0, right: 16),
+            padding: const EdgeInsets.only(left: 10.0, right: 10),
             child: Column(
               children: [
+                SizedBox(
+                  height: 50,
+                ),
                 Row(
                   children: [
-                    Image.asset(
-                      'assets/arrowleft.png',
-                      width: 50,
-                      height: 50,
+                    GestureDetector(
+                      onTap: () {
+                        Get.back();
+                      },
+                      child: Image.asset(
+                        'assets/arrowleft.png',
+                        width: 50,
+                        height: 50,
+                      ),
                     ),
                     SizedBox(
                       width: 100,
                     ),
                     Text(
-                      'Deposit',
+                      'Withdraw',
                       style: TextStyle(
                           fontSize: 22,
                           color: Color(0xFFFFFFFF),
-                          fontWeight: FontWeight.bold),
+                          fontWeight: FontWeight.w700),
                     ),
                   ],
                 ),
@@ -62,7 +71,7 @@ class _WithdrawState extends State<Withdraw> {
                       style: TextStyle(
                           fontSize: 15,
                           color: Color(0xFFFFFFFF),
-                          fontWeight: FontWeight.bold),
+                          fontWeight: FontWeight.w700),
                     ),
                   ],
                 ),
@@ -76,7 +85,7 @@ class _WithdrawState extends State<Withdraw> {
                       style: TextStyle(
                           fontSize: 12,
                           color: Color(0xFFFFFFFF),
-                          fontWeight: FontWeight.bold),
+                          fontWeight: FontWeight.w700),
                     ),
                   ],
                 ),
@@ -90,7 +99,7 @@ class _WithdrawState extends State<Withdraw> {
                       style: TextStyle(
                           fontSize: 16,
                           color: Color(0xFFFFFFFF),
-                          fontWeight: FontWeight.bold),
+                          fontWeight: FontWeight.w700),
                     ),
                   ],
                 ),
@@ -131,7 +140,7 @@ class _WithdrawState extends State<Withdraw> {
                       style: TextStyle(
                           fontSize: 16,
                           color: Color.fromARGB(132, 227, 222, 222),
-                          fontWeight: FontWeight.bold),
+                          fontWeight: FontWeight.w700),
                     ),
                   ],
                 ),
@@ -145,7 +154,7 @@ class _WithdrawState extends State<Withdraw> {
                       style: TextStyle(
                           fontSize: 16,
                           color: Color.fromARGB(255, 237, 232, 232),
-                          fontWeight: FontWeight.bold),
+                          fontWeight: FontWeight.w700),
                     ),
                   ],
                 ),
@@ -156,7 +165,7 @@ class _WithdrawState extends State<Withdraw> {
                       style: TextStyle(
                           fontSize: 16,
                           color: Color.fromARGB(255, 237, 232, 232),
-                          fontWeight: FontWeight.bold),
+                          fontWeight: FontWeight.w700),
                     ),
                   ],
                 ),
@@ -182,7 +191,7 @@ class _WithdrawState extends State<Withdraw> {
                       hintStyle: TextStyle(
                           fontSize: 16,
                           color: Color.fromARGB(255, 237, 232, 232),
-                          fontWeight: FontWeight.bold),
+                          fontWeight: FontWeight.w700),
                       suffixIcon: Icon(
                         EvaIcons.arrowDown,
                         color: Colors.white,
@@ -206,7 +215,7 @@ class _WithdrawState extends State<Withdraw> {
                       style: TextStyle(
                           fontSize: 16,
                           color: Color(0xFFFFFFFF),
-                          fontWeight: FontWeight.bold),
+                          fontWeight: FontWeight.w700),
                     ),
                   ],
                 ),
@@ -247,7 +256,7 @@ class _WithdrawState extends State<Withdraw> {
                       style: TextStyle(
                           fontSize: 14,
                           color: Color(0xFFFFFFFF),
-                          fontWeight: FontWeight.bold),
+                          fontWeight: FontWeight.w700),
                     ),
                   ],
                 ),

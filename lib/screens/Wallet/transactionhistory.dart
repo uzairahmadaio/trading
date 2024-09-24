@@ -1,5 +1,6 @@
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Transaction extends StatefulWidget {
   const Transaction({super.key});
@@ -30,15 +31,23 @@ class _TransactionState extends State<Transaction> {
           ),
           SingleChildScrollView(
               child: Padding(
-            padding: const EdgeInsets.only(left: 16.0, right: 16),
+            padding: const EdgeInsets.only(left: 10.0, right: 10),
             child: Column(
               children: [
+                SizedBox(
+                  height: 50,
+                ),
                 Row(
                   children: [
-                    Image.asset(
-                      'assets/arrowleft.png',
-                      width: 50,
-                      height: 50,
+                    GestureDetector(
+                      onTap: () {
+                        Get.back();
+                      },
+                      child: Image.asset(
+                        'assets/arrowleft.png',
+                        width: 50,
+                        height: 50,
+                      ),
                     ),
                     SizedBox(
                       width: 40,
@@ -46,7 +55,7 @@ class _TransactionState extends State<Transaction> {
                     Text(
                       'Transaction History',
                       style: TextStyle(
-                          fontSize: 22,
+                          fontSize: 15,
                           color: Color(0xFFFFFFFF),
                           fontWeight: FontWeight.bold),
                     ),
@@ -70,7 +79,7 @@ class _TransactionState extends State<Transaction> {
                   title: Text(
                     'Deposit',
                     style: TextStyle(
-                        fontSize: 17,
+                        fontSize: 15,
                         color: Color(0xFFFFFFFF),
                         fontWeight: FontWeight.bold),
                   ),
@@ -84,17 +93,14 @@ class _TransactionState extends State<Transaction> {
                   trailing: Text(
                     "\$134,876",
                     style: TextStyle(
-                        fontSize: 22,
+                        fontSize: 15,
                         color: Color(0xFFFFFFFF),
                         fontWeight: FontWeight.w800),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 25.0, right: 25),
-                  child: Divider(
-                    thickness: 2,
-                    color: Colors.blue,
-                  ),
+                Divider(
+                  thickness: 1,
+                  color: Colors.blue,
                 ),
                 ListTile(
                   leading: Container(
@@ -111,7 +117,7 @@ class _TransactionState extends State<Transaction> {
                   title: Text(
                     'Deposit',
                     style: TextStyle(
-                        fontSize: 17,
+                        fontSize: 15,
                         color: Color(0xFFFFFFFF),
                         fontWeight: FontWeight.bold),
                   ),
@@ -125,17 +131,14 @@ class _TransactionState extends State<Transaction> {
                   trailing: Text(
                     "\$134,876",
                     style: TextStyle(
-                        fontSize: 22,
+                        fontSize: 15,
                         color: Color(0xFFFFFFFF),
                         fontWeight: FontWeight.w800),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 25.0, right: 25),
-                  child: Divider(
-                    thickness: 2,
-                    color: Colors.blue,
-                  ),
+                Divider(
+                  thickness: 1,
+                  color: Colors.blue,
                 ),
                 ListTile(
                   leading: Container(
@@ -152,7 +155,7 @@ class _TransactionState extends State<Transaction> {
                   title: Text(
                     'Deposit',
                     style: TextStyle(
-                        fontSize: 17,
+                        fontSize: 15,
                         color: Color(0xFFFFFFFF),
                         fontWeight: FontWeight.bold),
                   ),
@@ -166,17 +169,14 @@ class _TransactionState extends State<Transaction> {
                   trailing: Text(
                     "\$134,876",
                     style: TextStyle(
-                        fontSize: 22,
+                        fontSize: 15,
                         color: Color(0xFFFFFFFF),
                         fontWeight: FontWeight.w800),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 25.0, right: 25),
-                  child: Divider(
-                    thickness: 2,
-                    color: Colors.blue,
-                  ),
+                Divider(
+                  thickness: 1,
+                  color: Colors.blue,
                 ),
                 SizedBox(
                   height: 20,
@@ -207,7 +207,7 @@ class _TransactionState extends State<Transaction> {
                   title: Text(
                     'Long XAG/USD',
                     style: TextStyle(
-                        fontSize: 17,
+                        fontSize: 15,
                         color: Color(0xFFFFFFFF),
                         fontWeight: FontWeight.bold),
                   ),
@@ -221,7 +221,7 @@ class _TransactionState extends State<Transaction> {
                   trailing: Text(
                     "\$134,876",
                     style: TextStyle(
-                        fontSize: 22,
+                        fontSize: 15,
                         color: Color(0xFFFFFFFF),
                         fontWeight: FontWeight.w800),
                   ),
@@ -241,7 +241,7 @@ class _TransactionState extends State<Transaction> {
                   title: Text(
                     'Long XAG/USD',
                     style: TextStyle(
-                        fontSize: 17,
+                        fontSize: 15,
                         color: Color(0xFFFFFFFF),
                         fontWeight: FontWeight.bold),
                   ),
@@ -255,7 +255,7 @@ class _TransactionState extends State<Transaction> {
                   trailing: Text(
                     "\$134,876",
                     style: TextStyle(
-                        fontSize: 22,
+                        fontSize: 15,
                         color: Color(0xFFFFFFFF),
                         fontWeight: FontWeight.w800),
                   ),

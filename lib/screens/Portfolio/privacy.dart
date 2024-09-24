@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Privacy extends StatefulWidget {
@@ -31,15 +32,23 @@ class _PrivacyState extends State<Privacy> {
           ),
           SingleChildScrollView(
               child: Padding(
-            padding: const EdgeInsets.only(left: 16.0, right: 16),
+            padding: const EdgeInsets.only(left: 10.0, right: 10),
             child: Column(
               children: [
+                SizedBox(
+                  height: 50,
+                ),
                 Row(
                   children: [
-                    Image.asset(
-                      'assets/arrowleft.png',
-                      width: 50,
-                      height: 50,
+                    GestureDetector(
+                      onTap: () {
+                        Get.back();
+                      },
+                      child: Image.asset(
+                        'assets/arrowleft.png',
+                        width: 50,
+                        height: 50,
+                      ),
                     ),
                     SizedBox(
                       width: 50,
@@ -49,7 +58,7 @@ class _PrivacyState extends State<Privacy> {
                       style: TextStyle(
                           fontSize: 22,
                           color: Color(0xFFFFFFFF),
-                          fontWeight: FontWeight.bold),
+                          fontWeight: FontWeight.w600),
                     ),
                   ],
                 ),
@@ -58,44 +67,51 @@ class _PrivacyState extends State<Privacy> {
                   style: TextStyle(
                       fontSize: 13,
                       color: Color(0xFFFFFFFF),
-                      fontWeight: FontWeight.bold),
+                      fontWeight: FontWeight.w600),
                 ),
                 SizedBox(
                   height: 26,
                 ),
                 Row(children: [
-                  Text(
-                    "1. Lorem ipsum dolor sit amet consectetur. Ullamcorper sed\nfeugiat sit non potenti. Sollicitudin bibendum elementum \nerat commodo ac in. Velit nec massa arcu faucibus. Libero\neuismod amet commodo quis. Sed auctor in fringilla\nfaucibus. Lectus orci nisi magnis elit tellus vitae bibendum\nenim. Urna ipsum nisl venenatis rhoncus lacinia vel tempor.\nAliquet nibh amet tortor orci lacus. Dolor tortor nisl urna\npenatibus massa ultricies non adipiscing sit.",
-                    style: TextStyle(
-                        fontSize: 13,
-                        color: Color(0xFFFFFFFF),
-                        fontWeight: FontWeight.bold),
+                  SizedBox(
+                    width: MediaQuery.sizeOf(context).width - 25,
+                    child: Text(
+                      "1. Lorem ipsum dolor sit amet consectetur. Ullamcorper sed\nfeugiat sit non potenti. Sollicitudin bibendum elementum \nerat commodo ac in. Velit nec massa arcu faucibus. Libero\neuismod amet commodo quis. Sed auctor in fringilla\nfaucibus. Lectus orci nisi magnis elit tellus vitae bibendum\nenim. Urna ipsum nisl venenatis rhoncus lacinia vel tempor.\nAliquet nibh amet tortor orci lacus. Dolor tortor nisl urna\npenatibus massa ultricies non adipiscing sit.",
+                      style: TextStyle(
+                          fontSize: 13,
+                          color: Color(0xFFFFFFFF),
+                          fontWeight: FontWeight.w600),
+                    ),
                   )
                 ]),
                 SizedBox(
                   height: 32,
                 ),
                 Row(children: [
-                  Text(
-                    "2. Lorem ipsum dolor sit amet consectetur. Ullamcorper sed\nfeugiat sit non potenti. Sollicitudin bibendum elementum \nerat commodo ac in. Velit nec massa arcu faucibus. Libero\neuismod amet commodo quis. Sed auctor in fringilla\nfaucibus. Lectus orci nisi magnis elit tellus vitae bibendum\nenim. Urna ipsum nisl venenatis rhoncus lacinia vel tempor.\nAliquet nibh amet tortor orci lacus. Dolor tortor nisl urna\npenatibus massa ultricies non adipiscing sit.",
-                    style: TextStyle(
-                        fontSize: 13,
-                        color: Color(0xFFFFFFFF),
-                        fontWeight: FontWeight.bold),
+                  SizedBox(
+                    width: MediaQuery.sizeOf(context).width - 25,
+                    child: Text(
+                      "2. Lorem ipsum dolor sit amet consectetur. Ullamcorper sed\nfeugiat sit non potenti. Sollicitudin bibendum elementum \nerat commodo ac in. Velit nec massa arcu faucibus. Libero\neuismod amet commodo quis. Sed auctor in fringilla\nfaucibus. Lectus orci nisi magnis elit tellus vitae bibendum\nenim. Urna ipsum nisl venenatis rhoncus lacinia vel tempor.\nAliquet nibh amet tortor orci lacus. Dolor tortor nisl urna\npenatibus massa ultricies non adipiscing sit.",
+                      style: TextStyle(
+                          fontSize: 13,
+                          color: Color(0xFFFFFFFF),
+                          fontWeight: FontWeight.w600),
+                    ),
                   )
                 ]),
                 SizedBox(
                   height: 16,
                 ),
-                Row(children: [
-                  Text(
+                SizedBox(
+                  width: MediaQuery.sizeOf(context).width - 25,
+                  child: Text(
                     "Lorem ipsum dolor sit amet consectetur. Ullamcorper sed\nfeugiat sit non potenti. Sollicitudin bibendum elementum \nerat commodo ac in. Velit nec massa arcu faucibus. Libero\neuismod amet commodo quis. Sed auctor in fringilla\nfaucibus. Lectus orci nisi magnis elit tellus vitae bibendum\nenim. Urna ipsum nisl venenatis rhoncus lacinia vel tempor.",
                     style: TextStyle(
                         fontSize: 13,
                         color: Color(0xFFFFFFFF),
-                        fontWeight: FontWeight.bold),
-                  )
-                ]),
+                        fontWeight: FontWeight.w600),
+                  ),
+                ),
               ],
             ),
           ))
