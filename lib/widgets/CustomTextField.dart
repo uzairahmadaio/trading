@@ -40,7 +40,7 @@ class CustomTextField extends StatelessWidget {
           margin: EdgeInsets.symmetric(horizontal: 23),
           height: 55,
           decoration: ShapeDecoration(
-            color: Colors.transparent,
+            color: Color(0xff5E687),
             shape: RoundedRectangleBorder(
               side: BorderSide(
                   // width: 2,

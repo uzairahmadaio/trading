@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tradingapp/screens/Portfolio/change.dart';
+import 'package:tradingapp/screens/Portfolio/edit.dart';
 import 'package:tradingapp/screens/bottomNav/bottomNav.dart';
 import 'package:tradingapp/screens/splash/splash.dart';
 
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: BottomNavScreen(),
+      home: Change(),
     );
   }
 }
