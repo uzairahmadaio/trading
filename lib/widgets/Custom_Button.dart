@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class CustomButton extends StatelessWidget {
+class CustomButton extends StatefulWidget {
   const CustomButton({
     super.key,
     required this.onTap,
@@ -10,6 +10,11 @@ class CustomButton extends StatelessWidget {
   final String text;
   final VoidCallback onTap;
 
+  @override
+  State<CustomButton> createState() => _CustomButtonState();
+}
+
+class _CustomButtonState extends State<CustomButton> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -24,7 +29,7 @@ class CustomButton extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            text,
+            widget.text,
             style: TextStyle(
               color: Color(0xFFFFFFFF),
               fontSize: 20.46,

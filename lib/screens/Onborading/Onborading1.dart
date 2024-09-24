@@ -15,7 +15,7 @@ class _On1State extends State<On1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF1E1E1E),
+      backgroundColor: Color(0xFF051718),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -28,11 +28,14 @@ class _On1State extends State<On1> {
               child: Image.asset('assets/LOGO (1).png')),
           Column(
             children: [
-              CustomButton(
-                text: 'Get Started',
+              GestureDetector(
                 onTap: () {
-                  Get.to(());
+                  Get.to((On2()));
                 },
+                child: CustomButton(
+                  text: 'Get Started',
+                  onTap: () {},
+                ),
               ),
               SizedBox(
                 height: 26,

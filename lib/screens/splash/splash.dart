@@ -16,7 +16,7 @@ class _SplashState extends State<Splash> {
   void initState() {
     super.initState();
 
-    Timer(Duration(seconds: 2), () {
+    Timer(Duration(seconds: 3), () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
           builder: (context) => On1(),
@@ -28,19 +28,36 @@ class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF1E1E1E),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      backgroundColor: Color(0xFF051718),
+      body: Stack(
         children: [
-          Row(
+          Positioned(
+            child: Container(
+              width: 200,
+              height: 200,
+              decoration: BoxDecoration(boxShadow: [
+                BoxShadow(
+                  color: Color.fromARGB(255, 226, 226, 226).withOpacity(0.1),
+                  spreadRadius: 9,
+                  blurRadius: 200,
+                )
+              ]),
+            ),
+          ),
+          Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                  width: 112,
-                  height: 48,
-                  child: Image.asset('assets/LOGO (1).png')),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                      width: 112,
+                      height: 48,
+                      child: Image.asset('assets/LOGO (1).png')),
+                ],
+              )
             ],
-          )
+          ),
         ],
       ),
     );

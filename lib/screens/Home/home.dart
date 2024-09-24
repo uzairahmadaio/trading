@@ -1,7 +1,9 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tradingapp/screens/Notification/notification.dart';
 import 'package:tradingapp/screens/Portfolio/portfolio.dart';
+import 'package:tradingapp/screens/Profile/profile.dart';
 import 'package:tradingapp/screens/theme/theme.dart';
 
 class Home extends StatefulWidget {
@@ -56,17 +58,27 @@ class _HomeState extends State<Home> {
                     ),
                     Row(
                       children: [
-                        Icon(
-                          Icons.notifications_outlined,
-                          color: Colors.white,
-                          size: 25,
+                        GestureDetector(
+                          onTap: () {
+                            Get.to(Notifications());
+                          },
+                          child: Icon(
+                            Icons.notifications_outlined,
+                            color: Colors.white,
+                            size: 25,
+                          ),
                         ),
                         SizedBox(
                           width: 5,
                         ),
-                        CircleAvatar(
-                            radius: 20,
-                            backgroundImage: AssetImage('assets/men.png')),
+                        GestureDetector(
+                          onTap: () {
+                            Get.to(Profile());
+                          },
+                          child: CircleAvatar(
+                              radius: 20,
+                              backgroundImage: AssetImage('assets/men.png')),
+                        ),
                       ],
                     )
                   ],

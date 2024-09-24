@@ -15,7 +15,7 @@ class _LOgincodeState extends State<LOgincode> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF1E1E1E),
+      backgroundColor: Color(0xFF051718),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -168,11 +168,16 @@ class _LOgincodeState extends State<LOgincode> {
           ),
           Column(
             children: [
-              CustomButton(
-                text: 'Verify',
+              GestureDetector(
                 onTap: () {
                   Get.to((Login()));
                 },
+                child: CustomButton(
+                  text: 'Verify',
+                  onTap: () {
+                    Get.to((Login()));
+                  },
+                ),
               ),
               SizedBox(
                 height: 76,

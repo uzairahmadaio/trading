@@ -16,7 +16,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+<<<<<<< HEAD
       home: Change(),
+=======
+      home: Splash(),
+>>>>>>> a40ef20c2dd81c345dfaa25f81da8b3b478b4e1c
     );
   }
 }
