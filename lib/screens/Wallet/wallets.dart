@@ -37,6 +37,5 @@ class _WalletsState extends State<Wallets> {
         ],
       ),
     );
-    ;
   }
 }

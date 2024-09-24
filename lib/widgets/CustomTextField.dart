@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CustomTextField extends StatelessWidget {
+class CustomTextField extends StatefulWidget {
   const CustomTextField({
     super.key,
     // required this.onTap,
@@ -10,8 +10,13 @@ class CustomTextField extends StatelessWidget {
   });
   final String text;
   final String text1;
+
+  @override
+  State<CustomTextField> createState() => _CustomTextFieldState();
+}
+
+class _CustomTextFieldState extends State<CustomTextField> {
   // final VoidCallback onTap;
-  // final icon;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -21,7 +26,7 @@ class CustomTextField extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 32.0),
               child: Text(
-                text,
+                widget.text,
                 style: TextStyle(
                   color: Color(0xFFFFFFFF),
                   fontSize: 16,
@@ -50,7 +55,7 @@ class CustomTextField extends StatelessWidget {
           ),
           child: TextField(
             decoration: InputDecoration(
-              hintText: text1,
+              hintText: widget.text1,
               hintStyle: TextStyle(
                 color: Colors.white,
                 fontSize: 17,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tradingapp/screens/Home/home.dart';
 import 'package:tradingapp/screens/Onborading/ForgetCode.dart';
 import 'package:tradingapp/screens/bottomNav/bottomNav.dart';
 import 'package:tradingapp/widgets/CustomTextField.dart';
@@ -17,7 +18,7 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF1E1E1E),
+      backgroundColor: Color(0xFF051718),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -85,11 +86,16 @@ class _LoginState extends State<Login> {
           SizedBox(
             height: 80,
           ),
-          CustomButton(
-            text: 'Create account',
+          GestureDetector(
             onTap: () {
-              Get.to(());
+              Get.to(BottomNavScreen());
             },
+            child: CustomButton(
+              text: 'LogIn',
+              onTap: () {
+                Get.to(());
+              },
+            ),
           ),
           SizedBox(
             height: 26,

@@ -14,10 +14,22 @@ class _FcodeState extends State<Fcode> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF1E1E1E),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      backgroundColor: Color(0xFF051718),
+      body: Stack(
         children: [
+          Positioned(
+            child: Container(
+              width: 200,
+              height: 200,
+              decoration: BoxDecoration(boxShadow: [
+                BoxShadow(
+                  color: Color.fromARGB(255, 226, 226, 226).withOpacity(0.1),
+                  spreadRadius: 9,
+                  blurRadius: 200,
+                )
+              ]),
+            ),
+          ),
           Column(
             children: [
               SizedBox(
@@ -167,11 +179,16 @@ class _FcodeState extends State<Fcode> {
           ),
           Column(
             children: [
-              CustomButton(
-                text: 'Verify',
+              GestureDetector(
                 onTap: () {
                   Get.to(());
                 },
+                child: CustomButton(
+                  text: 'Verify',
+                  onTap: () {
+                    Get.to(());
+                  },
+                ),
               ),
               SizedBox(
                 height: 76,
