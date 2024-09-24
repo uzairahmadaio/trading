@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tradingapp/screens/Onborading/ForgetCode.dart';
+import 'package:tradingapp/screens/bottomNav/bottomNav.dart';
 import 'package:tradingapp/widgets/CustomTextField.dart';
 import 'package:tradingapp/widgets/CustomTextField1.dart';
 import 'package:tradingapp/widgets/Custom_Button.dart';
@@ -63,13 +65,18 @@ class _LoginState extends State<Login> {
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 32.0),
-                child: Text(
-                  'Forget Password',
-                  style: TextStyle(
-                    color: Color(0xFFFFFFFF),
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                    // letterSpacing: 0.20,
+                child: GestureDetector(
+                  onTap: () {
+                    Fcode();
+                  },
+                  child: Text(
+                    'Forget Password',
+                    style: TextStyle(
+                      color: Color(0xFFFFFFFF),
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                      // letterSpacing: 0.20,
+                    ),
                   ),
                 ),
               ),
@@ -101,7 +108,7 @@ class _LoginState extends State<Login> {
               ),
               GestureDetector(
                 onTap: () {
-                  Get.to(());
+                  Get.to((BottomNavScreen()));
                 },
                 child: Text(
                   '  Log In',

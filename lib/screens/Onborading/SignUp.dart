@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tradingapp/screens/Onborading/Login.dart';
+import 'package:tradingapp/screens/Onborading/Logincode.dart';
 import 'package:tradingapp/widgets/CustomTextField.dart';
 import 'package:tradingapp/widgets/CustomTextField1.dart';
 import 'package:tradingapp/widgets/Custom_Button.dart';
@@ -123,7 +125,7 @@ class _SignupState extends State<Signup> {
               CustomButton(
                 text: 'Create account',
                 onTap: () {
-                  Get.to(());
+                  Get.to((LOgincode()));
                 },
               ),
               SizedBox(
@@ -143,7 +145,7 @@ class _SignupState extends State<Signup> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Get.to(());
+                      Get.to((Login(),));
                     },
                     child: Text(
                       '  Log In',

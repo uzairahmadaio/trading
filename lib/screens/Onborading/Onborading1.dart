@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tradingapp/screens/Onborading/Onborading2.dart';
 import 'package:tradingapp/widgets/Custom_Button.dart';
 
 class On1 extends StatefulWidget {
@@ -50,7 +51,7 @@ class _On1State extends State<On1> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Get.to(());
+                      Get.to((On2()));
                     },
                     child: Text(
                       '  Log In',

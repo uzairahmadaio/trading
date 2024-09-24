@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tradingapp/screens/Onborading/SignUp.dart';
 import 'package:tradingapp/widgets/Custom_Button.dart';
 
 class On2 extends StatefulWidget {
@@ -103,7 +104,7 @@ class _On2State extends State<On2> {
               CustomButton(
                 text: 'Continue',
                 onTap: () {
-                  Get.to(());
+                  Get.to((Signup()));
                 },
               ),
               SizedBox(

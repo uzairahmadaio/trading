@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+<<<<<<< HEAD
 import 'package:tradingapp/screens/MyTrades/mytrade.dart';
 import 'package:tradingapp/screens/Onborading/Login.dart';
 import 'package:tradingapp/screens/Onborading/Logincode.dart';
@@ -14,6 +15,8 @@ import 'package:tradingapp/screens/Wallet/preview.dart';
 import 'package:tradingapp/screens/Wallet/transactionhistory.dart';
 import 'package:tradingapp/screens/Wallet/wallets.dart';
 import 'package:tradingapp/screens/Wallet/withdraw.dart';
+=======
+>>>>>>> 479155697ed616a0c82efb19a6cc84e3c2c0d2ac
 import 'package:tradingapp/screens/bottomNav/bottomNav.dart';
 import 'package:tradingapp/screens/splash/splash.dart';
 
@@ -28,6 +31,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+<<<<<<< HEAD
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -49,6 +53,9 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: Contact(),
+=======
+      home: BottomNavScreen(),
+>>>>>>> 479155697ed616a0c82efb19a6cc84e3c2c0d2ac
     );
   }
 }
